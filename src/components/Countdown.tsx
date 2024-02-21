@@ -10,23 +10,23 @@ const Countdown: FC<CountdownProps> = ({ countdownData, name }) => {
   if (!countdownData.isItBday) {
     return (
       <div>
-        <h1 className="heading">Countdown para romper la distancia</h1>
+        <h1 className="heading">Cuando vamos a chingar la distancia?</h1>
         <div className="countdown-wrapper">
           <div className="countdown-box">
             {countdownData.days}
-            <span className="legend">Days</span>
+            <span className="legend">Dias</span>
           </div>
           <div className="countdown-box">
             {countdownData.hours}
-            <span className="legend">Hours</span>
+            <span className="legend">Horas</span>
           </div>
           <div className="countdown-box">
             {countdownData.minutes}
-            <span className="legend">Minutes</span>
+            <span className="legend">Minutos</span>
           </div>
           <div className="countdown-box">
             {countdownData.seconds}
-            <span className="legend">Seconds</span>
+            <span className="legend">Segundos</span>
           </div>
         </div>
       </div>

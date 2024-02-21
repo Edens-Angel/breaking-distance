@@ -11,6 +11,11 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  background-color: #4a0001;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--main-bg-color-dark);

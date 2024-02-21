@@ -113,15 +113,33 @@ const Birthday: FC<BirthdayProps> = ({ name, day, month }) => {
   ];
   let monthBday = monthNames[birth.getMonth()];
 
+  const toSpanish = (input: string) => {
+    const months = new Map();
+    months.set("January", "Enero");
+    months.set("February", "Febrero");
+    months.set("March", "Marzo");
+    months.set("April", "Abril");
+    months.set("May", "Mayo");
+    months.set("June", "Junio");
+    months.set("July", "Julio");
+    months.set("August", "Agosto");
+    months.set("September", "Septiembre");
+    months.set("October", "Octubre");
+    months.set("November", "Noviembre");
+    months.set("December", "Diciembre");
+
+    return months.get(input);
+  };
+
   return (
     <div className="page">
       <Countdown countdownData={state} name={name} />
       {!isItBday && (
         <>
           <div className="birthdate">
-            Estamos esperando hasta:{" "}
+            SIII BEBÉ:{" "}
             <span style={{ textDecoration: "underline" }}>
-              {day} {monthBday} {currentYear}
+              {day} {toSpanish(monthBday)} {currentYear}
             </span>
           </div>
         </>
